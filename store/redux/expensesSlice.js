@@ -61,7 +61,7 @@ const ExpenseSlice = createSlice({
       const newData = action.payload.expenseData;
 
       const foundIndex = state.expenses.findIndex((item) => item.id === id);
-      state.expenses[foundIndex] = { id, newData };
+      state.expenses[foundIndex] = { id, ...newData };
     },
     removeExpense: (state, action) => {
       const id = action.payload.expenseId;

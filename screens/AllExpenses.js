@@ -4,6 +4,7 @@ import { ExpensesOutput } from "../components";
 
 const AllExpenses = () => {
   const { expenses } = useSelector((state) => state.expenses);
+  console.log(expenses);
 
   return (
     <ExpensesOutput
